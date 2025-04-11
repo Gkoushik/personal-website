@@ -1,24 +1,23 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
+import InteractiveGraphic from './components/InteractiveGraphic';
 import Contact from './components/Contact';
+import DotBackground from './components/DotBackground';
+import Content from './components/Content';
 
 function App() {
     return (
         <div className="App">
-            <Navbar />
-            <main>
-                <Hero />
-                <About />
-                <Projects />
-                <Contact />
-            </main>
-            <footer>
-                <p>&copy; 2024 Your Name. All rights reserved.</p>
-            </footer>
+            <DotBackground />
+            <InteractiveGraphic />
+            <div className="content-wrapper">
+                <Navbar />
+                <main>
+                    <Content />
+                    <Contact />
+                </main>
+            </div>
         </div>
     );
 }
