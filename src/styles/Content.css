@@ -42,9 +42,7 @@
 }
 
 .terminal-line.active {
-    background: rgba(100, 255, 218, 0.1);
-    padding: 0.5rem;
-    border-radius: 3px;
+    opacity: 1;
 }
 
 .terminal-line.active::before {
@@ -59,44 +57,41 @@
 
 .terminal-prefix {
     color: #64ffda;
-    font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     white-space: nowrap;
-    text-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
 }
 
 .terminal-command {
-    color: #d4d4d4;
-    font-size: 1rem;
-    font-weight: 400;
+    color: #64ffda;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
+    transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
 .terminal-command:hover {
-    color: #64ffda;
-    text-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
-}
-
-.terminal-command::after {
-    content: '|';
-    position: absolute;
-    right: -0.5rem;
-    animation: blink 1s infinite;
+    opacity: 0.8;
 }
 
 .terminal-text {
-    color: #d4d4d4;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+    color: #a8b2d1;
+    line-height: 1.6;
+    flex: 1;
 }
 
 .terminal-line.active .terminal-text {
-    color: #ffffff;
-    text-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .terminal-output {
@@ -261,18 +256,13 @@
 .terminal-input {
     background: transparent;
     border: none;
-    color: #d4d4d4;
+    color: #64ffda;
     font-family: 'JetBrains Mono', monospace;
     font-size: 1rem;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 0.5rem;
     outline: none;
     caret-color: #64ffda;
-}
-
-.terminal-input::placeholder {
-    color: rgba(212, 212, 212, 0.5);
 }
 
 .command-suggestions {
@@ -324,11 +314,12 @@
     }
 
     .terminal-line {
-        gap: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     .terminal-prefix,
-    .terminal-command {
+    .terminal-command,
+    .terminal-text {
         font-size: 0.9rem;
     }
 
@@ -348,5 +339,10 @@
 
     .command-suggestions {
         max-height: 100px;
+    }
+
+    .terminal-input {
+        font-size: 0.9rem;
+        padding: 0.4rem;
     }
 }

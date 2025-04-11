@@ -73,10 +73,10 @@ const Content = () => {
                             <span className="terminal-text">Ganni Koushik</span>
                         )}
                     </div>
-                    <div className={`terminal-line ${activeCommand === 'role' ? 'active' : ''}`}>
+                    <div className={`terminal-line ${activeCommand === 'cat role.txt' ? 'active' : ''}`}>
                         <span className="terminal-prefix">koushik@home:~$</span>
-                        <span className="terminal-command" onClick={() => handleCommandClick('role')}>cat role.txt {'>'}</span>
-                        {activeCommand === 'role' && (
+                        <span className="terminal-command" onClick={() => handleCommandClick('cat role.txt')}>cat role.txt {'>'}</span>
+                        {activeCommand === 'cat role.txt' && (
                             <span className="terminal-text">Software Development Engineer II at Amazon</span>
                         )}
                     </div>
@@ -89,37 +89,37 @@ const Content = () => {
                             <span className="terminal-text">I am a passionate developer with expertise in web development and a strong focus on creating efficient, user-friendly applications.</span>
                         </div>
                     )}
-                    <div className={`terminal-line ${activeCommand === 'skills' ? 'active' : ''}`}>
+                    <div className={`terminal-line ${activeCommand === 'ls skills/' ? 'active' : ''}`}>
                         <span className="terminal-prefix">koushik@home:~$</span>
-                        <span className="terminal-command" onClick={() => handleCommandClick('skills')}>ls skills/ {'>'}</span>
-                        {activeCommand === 'skills' && (
+                        <span className="terminal-command" onClick={() => handleCommandClick('ls skills/')}>ls skills/ {'>'}</span>
+                        {activeCommand === 'ls skills/' && (
                             <div className="terminal-line active">
                                 <span className="terminal-text">React JavaScript Java Python AWS</span>
                             </div>
                         )}
                     </div>
-                    <div className={`terminal-line ${activeCommand === 'projects' ? 'active' : ''}`}>
+                    <div className={`terminal-line ${activeCommand === 'cd ../projects/' ? 'active' : ''}`}>
                         <span className="terminal-prefix">koushik@home:~$</span>
-                        <span className="terminal-command" onClick={() => handleCommandClick('projects')}>cd ../projects/ {'>'}</span>
-                        {activeCommand === 'projects' && (
+                        <span className="terminal-command" onClick={() => handleCommandClick('cd ../projects/')}>cd ../projects/ {'>'}</span>
+                        {activeCommand === 'cd ../projects/' && (
                             <div className="terminal-line active">
                                 <a href="https://gkoushik.github.io/Visualizer/#/" target="_blank" rel="noopener noreferrer" className="terminal-text">Visualizer - Path Finding & Sorting Algorithms</a>
                             </div>
                         )}
                     </div>
-                    <div className={`terminal-line ${activeCommand === 'interests' ? 'active' : ''}`}>
+                    <div className={`terminal-line ${activeCommand === 'cd interests/' ? 'active' : ''}`}>
                         <span className="terminal-prefix">koushik@home:~$</span>
-                        <span className="terminal-command" onClick={() => handleCommandClick('interests')}>cd interests/ {'>'}</span>
-                        {activeCommand === 'interests' && (
+                        <span className="terminal-command" onClick={() => handleCommandClick('cd interests/')}>cd interests/ {'>'}</span>
+                        {activeCommand === 'cd interests/' && (
                             <div className="terminal-line active">
                                 <span className="terminal-text">Web Development Machine Learning UI/UX Design Problem Solving</span>
                             </div>
                         )}
                     </div>
-                    <div className={`terminal-line ${activeCommand === 'commands' ? 'active' : ''}`}>
+                    <div className={`terminal-line ${activeCommand === 'ls commands/' ? 'active' : ''}`}>
                         <span className="terminal-prefix">koushik@home:~$</span>
-                        <span className="terminal-command" onClick={() => handleCommandClick('commands')}>ls commands/ {'>'}</span>
-                        {activeCommand === 'commands' && (
+                        <span className="terminal-command" onClick={() => handleCommandClick('ls commands/')}>ls commands/ {'>'}</span>
+                        {activeCommand === 'ls commands/' && (
                             <div className="terminal-line active">
                                 <span className="terminal-text">Available commands:</span>
                                 <div className="terminal-line">

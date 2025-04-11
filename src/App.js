@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import InteractiveGraphic from './components/InteractiveGraphic';
-import Contact from './components/Contact';
 import DotBackground from './components/DotBackground';
 import Content from './components/Content';
 
@@ -15,7 +14,6 @@ function App() {
                 <Navbar />
                 <main>
                     <Content />
-                    <Contact />
                 </main>
             </div>
         </div>
