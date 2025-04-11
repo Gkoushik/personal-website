@@ -2,7 +2,7 @@
     "name": "personal-website",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://gkoushik.github.io/personal-website",
+    "homepage": "https://gkoushik.github.io/portfolio",
     "dependencies": {
         "@react-three/drei": "^10.0.6",
         "@react-three/fiber": "^9.1.2",
