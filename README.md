@@ -1,64 +1,49 @@
-# Personal Website
+# Terminal Portfolio Website
 
-A modern, responsive personal website built with React.
+A modern, terminal-style portfolio website built with React.
 
-## Features
-
-- Responsive design that works on all devices
-- Modern UI with smooth animations
-- Contact form
-- Project showcase
-- Social media links
-- Mobile-friendly navigation
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
+## Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/personal-website.git
-cd personal-website
+git clone <your-repo-url>
+cd PersonalWebsite
 ```
 
 2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Start the development server:
+## Running Locally
+
+1. Start the development server:
 ```bash
 npm start
-# or
-yarn start
 ```
 
-The website will be available at `http://localhost:3000`.
+2. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Available Commands
+
+- `whoami` - Display name
+- `cat role.txt` - Show current role
+- `about` - Display about information
+- `ls skills/` - List skills
+- `cd ../projects/` - Show projects
+- `cd interests/` - Show interests
+- `ls commands/` - List all available commands
 
 ## Deployment
 
-This website is configured for deployment on GitHub Pages. To deploy:
+### Deploying to GitHub Pages
 
-1. Update the `homepage` field in `package.json` to your GitHub Pages URL:
-```json
-"homepage": "https://yourusername.github.io/personal-website"
-```
-
-2. Install gh-pages:
+1. Install gh-pages:
 ```bash
-npm install --save gh-pages
-# or
-yarn add gh-pages
+npm install gh-pages --save-dev
 ```
 
-3. Add the following scripts to `package.json`:
+2. Add these scripts to package.json:
 ```json
 "scripts": {
   "predeploy": "npm run build",
@@ -66,26 +51,45 @@ yarn add gh-pages
 }
 ```
 
-4. Deploy to GitHub Pages:
-```bash
-npm run deploy
-# or
-yarn deploy
+3. Add homepage field to package.json:
+```json
+"homepage": "https://<your-username>.github.io/<repo-name>"
 ```
 
-## Customization
+4. Deploy:
+```bash
+npm run deploy
+```
 
-1. Update personal information in the respective components:
-   - `src/components/About.js`
-   - `src/components/Projects.js`
-   - `src/components/Contact.js`
+### Deploying to Netlify
 
-2. Update social media links in `src/components/Contact.js`
+1. Push your code to GitHub
+2. Create a new site on Netlify
+3. Connect to your GitHub repository
+4. Set build command: `npm run build`
+5. Set publish directory: `build`
+6. Deploy site
 
-3. Add your own projects in `src/components/Projects.js`
+## Project Structure
 
-4. Customize colors and styles in the CSS files located in `src/styles/`
+```
+src/
+├── components/
+│   ├── Content.js
+│   ├── DotBackground.js
+│   ├── InteractiveGraphic.js
+│   └── Navbar.js
+├── styles/
+│   ├── Content.css
+│   ├── DotBackground.css
+│   ├── InteractiveGraphic.css
+│   └── Navbar.css
+└── App.js
+```
 
-## License
+## Technologies Used
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+- React
+- CSS3
+- JavaScript
+- HTML5 
